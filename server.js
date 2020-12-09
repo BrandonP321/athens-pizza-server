@@ -25,9 +25,11 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/athenspizza", {
 
 // bring in routes
 const food = require("./routes/Food")
+const pageText = require('./routes/pageText')
 
 //use routes
 app.use("/api", food)
+app.use('/api', pageText)
 
 
 app.listen(PORT, () => {

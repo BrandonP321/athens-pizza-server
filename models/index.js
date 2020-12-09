@@ -1,3 +1,4 @@
 module.exports = {
-    Food: require('./Food')
+    Food: require('./Food'),
+    PageText: require('./PageText')
 }
