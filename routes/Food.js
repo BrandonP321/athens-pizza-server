@@ -40,7 +40,7 @@ router.put('/food/:id', (req, res) => {
 router.delete('/food/:id', function (req, res) {
     const { id } = req.params
     // delete from db
-    db.Food.remove({ _id: id}, (err, data) => {
+    db.Food.deleteOne({ _id: id}, (err, data) => {
         if (err) {
             console.log(err)
         } else {
